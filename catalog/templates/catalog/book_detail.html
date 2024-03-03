@@ -6,7 +6,11 @@
               </form>
     <p></p>
   <h1>Title: {{ book.title }}</h1>
-
+    <div>
+    {% if book.book_image %}
+        <img src="{{ book.book_image.url }}">
+    {% endif %}
+    </div>
   <p><strong>Author:</strong> <a href="{{ book.author.get_absolute_url }}">{{ book.author }}</a></p>
   <p><strong>Summary:</strong> {{ book.summary }}</p>
   <p><strong>ISBN:</strong> {{ book.isbn }}</p>
